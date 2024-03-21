@@ -43,7 +43,6 @@ def get_parser():
     parser.add_argument('--temperature', type=float, default=0.0, help='TBD(default: 0.0)') 
     parser.add_argument("--language","-ln",type=str,default="hi_in", help="Langauge for the dataset.")
     parser.add_argument("--resume_inference","-rn",type=bool,default="False", help="Resume the inference from the last decoded state.")
-    parser.add_argument("--lazy_dump","-lz",type=bool,default=False, help="Lazy dump set to True create whisper features during inference.")    
     
     return parser
 
