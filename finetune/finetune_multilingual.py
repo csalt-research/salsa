@@ -326,11 +326,6 @@ def get_batch(
         for i in ix:
             audio_path = data[i]["path"]
 
-            if audio_path.startswith("dev"):
-                audio_path = os.path.join('/dccstor/speech_irl/datasets/speech/fleurs/downloads/extracted/d8586e8de8edc53126279e0712c69427477a051f8cc4aaaa57c3b02b8154f6ea', audio_path)
-            elif audio_path.startswith("train"):
-                audio_path = os.path.join('/dccstor/speech_irl/datasets/speech/fleurs/downloads/extracted/c0d54967a2235366051180de1ed2a985a83a021a268a6b1e5a3fbe14fcb632b3', audio_path)
-
             audio_dataset = Dataset.from_dict({"audio": [audio_path]}).cast_column("audio", Audio())
 
             #get features from the audio path.
