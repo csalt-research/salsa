@@ -99,7 +99,17 @@ if [ ${stage} -le 2 ] && [ ${stop_stage} -ge 2 ]; then
 fi
 
 if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
-    log "Stage 3: Inference on the finetuned LLama model"
+    log "Stage 3: Compute the length model"
+    mkdir -p ${exp_dir}
+    
+    python data_preparation/calculate_length_model.py \
+        --train-data-path ${dump_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}_train.pt \
+        --val-data-path ${dump_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}_validation.pt \
+        --exp-dir ${exp_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}
+fi
+
+if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
+    log "Stage 4: Inference on the finetuned LLama model"
 
     for split in test; do
         python inference/inference.py \
@@ -117,8 +127,8 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
 fi
 
 
-if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
-    log "Stage 4: Whisper Inference"
+if [ ${stage} -le 5 ] && [ ${stop_stage} -ge 5 ]; then
+    log "Stage 5: Whisper Inference"
 
     for split in test; do
         python inference/inference_whisper.py \
@@ -135,7 +145,7 @@ if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
 fi
 
 if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
-    log "Stage 2: Finetune Multilingual LLama model"
+    log "Stage 6: Finetune Multilingual LLama model"
     mkdir -p ${exp_dir}
     
     python finetune/finetune_multilingual.py \
@@ -149,7 +159,7 @@ if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
 fi
 
 if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
-    log "Stage 3: Inference on the finetuned Multilingual LLama model"
+    log "Stage 7: Inference on the finetuned Multilingual LLama model"
     for split in validation test; do
         python inference/inference.py \
             --checkpoint-dir ${model_save_dir}/${llama_repo_id} \
@@ -163,15 +173,4 @@ if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
             --use-nucleus-sampling True \
             --use-length-model True 
     done;
-fi
-
-
-if [ ${stage} -le 8 ] && [ ${stop_stage} -ge 8 ]; then
-    log "Stage 2: Compute the length model"
-    mkdir -p ${exp_dir}
-    
-    python data_preparation/calculate_length_model.py \
-        --train-data-path ${dump_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}_train.pt \
-        --val-data-path ${dump_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}_validation.pt \
-        --exp-dir ${exp_dir}/${dataset}_${language}_whisper_${whisper_model}_${llama_model}
 fi
