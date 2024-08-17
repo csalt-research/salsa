@@ -99,8 +99,8 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-* **Ashish Mittal** - *Research Scientist, IBM Research, PhD IIT Bombay* - [Ashish Mittal](https://www.linkedin.com/in/ashish-mittal-6720663a/)
-* **Darshan Prabhu** - *M.Tech, CSE, IIT Bombay* - [Darshan Prabhu](https://www.linkedin.com/in/darshan-prabhu/)
+* **Ashish Mittal** - *Research Scientist, IBM Research & PhD, CSE, IIT Bombay* - [Ashish Mittal](https://www.linkedin.com/in/ashish-mittal-6720663a/)
+* **Darshan Prabhu** - *PhD, CSE, IIT Bombay* - [Darshan Prabhu](https://www.linkedin.com/in/darshan-prabhu/)
 * **Sunita Sarawagi** - *Associate Professor, CSE, IIT Bombay* - [Sunita Sarawagi](https://www.cse.iitb.ac.in/~sunita/)
 * **Preethi Jyothi** - *Associate Professor, CSE, IIT Bombay* - [Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/)
 
