@@ -104,23 +104,22 @@ Contributions are what make the open source community such an amazing place to b
 * **Sunita Sarawagi** - *Associate Professor, CSE, IIT Bombay* - [Sunita Sarawagi](https://www.cse.iitb.ac.in/~sunita/)
 * **Preethi Jyothi** - *Associate Professor, CSE, IIT Bombay* - [Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/)
 
-
-<!--- 
+ 
 ## Citation
 
 If you use this code for your research, please consider citing our work.
 
 ```bibtex
-@misc{prabhu2023accented,
-      title={Accented Speech Recognition With Accent-specific Codebooks}, 
-      author={Darshan Prabhu and Preethi Jyothi and Sriram Ganapathy and Vinit Unni},
-      year={2023},
-      eprint={2310.15970},
+@misc{mittal2024salsaspeedyasrllmsynchronous,
+      title={SALSA: Speedy ASR-LLM Synchronous Aggregation}, 
+      author={Ashish Mittal and Darshan Prabhu and Sunita Sarawagi and Preethi Jyothi},
+      year={2024},
+      eprint={2408.16542},
       archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2408.16542}, 
 }
 ```
---->
 
 ## License
 
