@@ -25,7 +25,7 @@
 
 ## About The Repository
 
-This repository hosts the artifacts pertaining to [our paper](https://arxiv.org/abs/2408.16542) **<samp>SALSA: Speedy ASR-LLM Synchronous Aggregation</samp>** accepted to ***Interspeech 2024***.
+This repository hosts the artifacts pertaining to our paper [**<samp>SALSA: Speedy ASR-LLM Synchronous Aggregation</samp>**](https://arxiv.org/abs/2408.16542) accepted to ***Interspeech 2024***.
 
 The main contribution of our paper is :mag_right: a simple <samp>LLM stitching technique</samp> that uses a <samp>tokenization agnostic algorithm</samp> to combine the generation capability from *`LLAMA`* and speech comprehension from *`Whisper`*.
 
