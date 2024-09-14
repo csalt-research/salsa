@@ -9,7 +9,7 @@
   </p>
 </p>
   
-<a href="#"> <img src="https://img.shields.io/badge/PDF-Arxiv-teal"></a> ![Downloads](https://img.shields.io/github/downloads/csalt-research/salsa/total.svg) ![Contributors](https://img.shields.io/github/contributors/csalt-research/salsa?color=dark-green) ![Forks](https://img.shields.io/github/forks/csalt-research/salsa?style=social) ![Stargazers](https://img.shields.io/github/stars/csalt-research/salsa?style=social) 
+<a href="https://arxiv.org/abs/2408.16542"> <img src="https://img.shields.io/badge/PDF-Arxiv-teal"></a> ![Downloads](https://img.shields.io/github/downloads/csalt-research/salsa/total.svg) ![Contributors](https://img.shields.io/github/contributors/csalt-research/salsa?color=dark-green) ![Forks](https://img.shields.io/github/forks/csalt-research/salsa?style=social) ![Stargazers](https://img.shields.io/github/stars/csalt-research/salsa?style=social) 
 
 ## Table Of Contents
 
